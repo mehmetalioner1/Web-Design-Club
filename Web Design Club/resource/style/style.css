@@ -1,0 +1,463 @@
+/*
+Color Code:
+1.#3D608E
+2.#DFC698
+3.#E5B763
+4.#586474
+5.#DAD0BE
+6.#2A323C
+
+Font-family:
+Ubuntu Bold - Title
+Open Sans Regular - Content
+
+Section:
+0.General - 24
+1.header - 38
+2.banner
+3.new-works
+4.our-works
+5.contact
+6.footer
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-container {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.header-container img {
+  height: 3rem;
+  width: auto;
+  margin: 0 2rem;
+}
+.header-container img:hover {
+  cursor: pointer;
+}
+.header-container ul {
+  font-family: "Open Sans", serif;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.header-container li {
+  font-size: small;
+  margin: 0 1rem;
+}
+.header-container li:hover {
+  cursor: pointer;
+}
+.header-container li a {
+  color: #000;
+}
+.header-container .nav-item:hover {
+  background-color: #e5b763;
+  padding: 0.5rem 1rem;
+  margin: 0 0;
+  border-radius: 10px;
+}
+.header-container button {
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  background-color: #e5b763;
+  font-family: "Open Sans", serif;
+  padding: 0.5rem 1.4rem;
+  border-radius: 10px;
+  margin: 0 2rem;
+}
+.header-container button:hover {
+  background-color: #639ce6;
+}
+
+.header-container button a {
+  color: #000;
+}
+#bars img {
+  height: 1rem;
+}
+
+#bars {
+  display: none;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+}
+
+#bars:hover {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 850px) {
+  #bars {
+    display: inline;
+  }
+  .header-container .nav-bar {
+    display: none;
+  }
+  .header-container .join-us {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header-container img {
+    height: 2rem;
+    margin: 0 1rem;
+  }
+  #bars {
+    margin: 0 1rem;
+  }
+}
+
+/* Banner */
+
+.banner {
+  background-color: #586474;
+  width: 100%;
+  height: 40rem;
+}
+
+.banner-container {
+  height: 100%;
+  display: grid;
+  gap: 0;
+  grid-template: repeat(20, 1fr) / repeat(20, 1fr);
+}
+.banner .content {
+  text-align: center;
+  grid-area: 6 / 2 / span 11 / span 10;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.banner .content h1 {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 3rem;
+  color: #639ce6;
+}
+
+.banner .content .sub-title1 {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 2rem;
+  color: #dfc698;
+}
+
+.banner .content .sub-title2 {
+  padding: 0 1rem 1rem 1rem;
+  text-align: center;
+  font-size: 2rem;
+  color: #dad0be;
+}
+
+.banner .logo {
+  grid-area: 5 / 16 / span 10 / span 4;
+  padding: 5rem 2rem;
+  border-radius: 20px;
+  align-self: center;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  background-color: #e5b763;
+}
+
+.banner .logo img {
+  width: 18rem;
+}
+
+@media only screen and (max-width: 850px) {
+  .banner-container {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+  .banner .logo {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .banner .content h1 {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    font-size: 2.5rem;
+    color: #639ce6;
+  }
+
+  .banner .content .sub-title1 {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    font-size: 1.5rem;
+    color: #dfc698;
+  }
+
+  .banner .content .sub-title2 {
+    padding: 0 0.5rem 0.5rem 0.5rem;
+    font-size: 1.5rem;
+    color: #dad0be;
+  }
+}
+
+/* New Works*/
+
+.new-works {
+  background-color: #dfc698;
+  padding: 6rem 2rem 2rem 2rem;
+}
+.title {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.works-container {
+  display: flex;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.works-container .work {
+  cursor: pointer;
+  background-image: url("../images/work-image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  margin: 2rem 1rem;
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.works-container .work:hover {
+  height: 22rem;
+  width: 22rem;
+  margin: 1rem 0;
+}
+
+.work .background {
+  z-index: 1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 100%;
+  background-color: #586474;
+  grid-area: 4 / 1 / 1 span 1 / 1;
+}
+
+.background .content {
+  font-family: "Open Sans", serif;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.content .content-title {
+  font-weight: normal;
+  line-height: 1.8rem;
+}
+
+.content .read-more {
+  cursor: pointer;
+  font-size: 0.8rem;
+  border: none;
+  background-color: #e5b763;
+  font-family: "Open Sans", serif;
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+  margin: 0 2rem;
+}
+
+.content .read-more:hover {
+  background-color: #639ce6;
+}
+/* Our Works*/
+
+.our-works {
+  background-color: #dad0be;
+  padding: 6rem 2rem 2rem 2rem;
+}
+
+/* Contact */
+
+.contact {
+  background-color: #2a323c;
+  padding: 6rem 2rem 2rem 2rem;
+  font-family: "Open Sans", serif;
+}
+
+.contact .title {
+  color: #fff;
+}
+.contact .contact-container {
+  background-color: #586474;
+  color: #fff;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 20px;
+  display: grid;
+  grid-template: 1fr 1fr 10rem 2rem/ 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "name name surname surname"
+    "phone phone e-mail-address e-mail-address"
+    "e-mail e-mail e-mail e-mail"
+    ". . . button";
+  gap: 1.5rem;
+}
+
+#contact-name {
+  grid-area: name;
+}
+
+#contact-surname {
+  grid-area: surname;
+}
+
+#contact-phone-number {
+  grid-area: phone;
+}
+
+#contact-e-mail-address {
+  grid-area: e-mail-address;
+}
+
+#contact-e-mail {
+  grid-area: e-mail;
+}
+
+.contact .input-normal {
+  padding: 1rem;
+  margin-top: 0.4rem;
+  border: none;
+  border-radius: 10px;
+  height: 2.5rem;
+  width: 100%;
+}
+
+.contact .input-large {
+  padding: 1rem;
+  margin-top: 0.4rem;
+  border-radius: 10px;
+  height: 7.5rem;
+  width: 100%;
+}
+
+.contact-container button {
+  cursor: pointer;
+  grid-area: button;
+  font-size: 1rem;
+  border: none;
+  background-color: #e5b763;
+  font-family: "Open Sans", serif;
+  padding: 0.2rem 1rem;
+  border-radius: 10px;
+}
+
+.contact-container button:hover {
+  background-color: #639ce6;
+}
+
+@media only screen and (max-width: 600px) {
+  .contact .contact-container {
+    grid-template: 1fr 1fr 1fr 1fr 10rem 2rem/ 1fr 1fr;
+    grid-template-areas:
+      "name name"
+      "surname surname"
+      "phone phone"
+      "e-mail-address e-mail-address"
+      "e-mail e-mail"
+      ". button";
+    gap: 1.5rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .contact .contact-container {
+    margin: 0;
+    padding: 0.5rem;
+    gap: 0.8rem;
+  }
+}
+
+/* Footer */
+
+footer {
+  height: 10rem;
+  display: block;
+}
+
+footer .icons {
+  height: 5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .icons img {
+  height: 1rem;
+  width: 1rem;
+}
+
+.icons .icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon h4 {
+  font-family: "Ubuntu";
+  font-weight: 100;
+  margin-left: 1rem;
+  text-align: center;
+}
+
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+}
